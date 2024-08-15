@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <img class="logo" src="spillquiz-logo-web.png" alt="Spillquiz med Marius og Jakob">
+		<a class="socialsLink" href="https://instagram.com/spillquiz.no">Instagram →</a>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4rem;
+		min-height: 100vh;
+		justify-content: center;
+  }
+	.logo{
+		max-width: 20rem;
+		padding: 0 1rem;
+	}
+	.socialsLink{
+		color: #fcfcfc;
+		text-decoration: none;
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+		border-radius: 0.5rem;
+		background-color: #fcfcfc44;
+		transition: all 0.2s;
+
+		&:hover{
+			background-color: #fcfcfc66;
+			color: #ffd700;
+		}
+	}
+</style>
