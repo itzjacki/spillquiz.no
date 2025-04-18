@@ -10,7 +10,9 @@ import Layout from "../layouts/Layout.astro";
       alt="Spillquiz med Marius og Jakob"
     />
     <div class="socialsWrapper">
-      <a class="socialsLink" href="https://forms.gle/HNLy47bJu23B383W9"
+      <a
+        class="socialsLink spansAllCols"
+        href="https://forms.gle/HNLy47bJu23B383W9"
         >Påmelding <span style="color: #ffd790">SPILL</span>QUIZ 26. juni →</a
       >
       <a class="socialsLink shortLink" href="https://discord.gg/Hb6EEZ5tYt"
@@ -21,6 +23,9 @@ import Layout from "../layouts/Layout.astro";
       >
       <a class="socialsLink shortLink" href="https://twitch.tv/spillquiz"
         ><span>Twitch</span><span>→</span></a
+      >
+      <a class="socialsLink shortLink" href="https://www.youtube.com/@Spillquiz"
+        ><span>YouTube</span><span>→</span></a
       >
     </div>
   </main>
@@ -39,8 +44,8 @@ import Layout from "../layouts/Layout.astro";
     justify-content: center;
   }
   .socialsWrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     align-items: center;
   }
@@ -48,6 +53,7 @@ import Layout from "../layouts/Layout.astro";
     max-width: 20rem;
     padding: 0 1rem;
   }
+
   .socialsLink {
     color: #fcfcfc;
     text-decoration: none;
@@ -57,6 +63,11 @@ import Layout from "../layouts/Layout.astro";
     background-color: #fcfcfc44;
     transition: all 0.2s;
     width: fit-content;
+
+    &.spansAllCols {
+      grid-column: span 2;
+      width: 100%;
+    }
 
     &:hover {
       background-color: #fcfcfc66;
